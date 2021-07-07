@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//Necesario para recibir parámetros
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService, Heroe } from '../../services/heroes.service';
 
@@ -13,10 +14,10 @@ export class HeroeComponent {
     private activatedRoute: ActivatedRoute,
     private heroeService: HeroesService
   ) {
-    //El params regresa un observador (algo pendiente de unos cambios)
+    //Aquí usamos el activatedRoute. El params regresa un observador (algo pendiente de unos cambios)
     this.activatedRoute.params.subscribe((params) => {
       //Es id porque así lo puse en el route (Nuestra variable de heroes se carga)
-      this.heroe = this.heroeService.getHeroe(params.id);
+      this.heroe = this.heroeService.getHeroe(params['id']);
       if (this.heroe.casa == 'Marvel') {
         this.imgHeroe = 'assets/img/Marvel.png';
       } else {

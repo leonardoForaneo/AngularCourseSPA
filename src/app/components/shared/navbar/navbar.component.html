@@ -25,8 +25,10 @@
             </ul>
 
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <input #buscarTexto (keypress.enter)="buscarHeroe(buscarTexto.value)" class="form-control me-2" type="search" placeholder="Buscar heroe" aria-label="Search" />
+                <button (click)="buscarHeroe(buscarTexto.value)" #buscarTexto class="btn btn-outline-primary" type="button">
+          Buscar
+        </button>
             </form>
         </div>
     </div>

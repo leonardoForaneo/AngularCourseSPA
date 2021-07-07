@@ -73,6 +73,22 @@ export class HeroesService {
   getHeroe(idx: number) {
     return this.heroes[idx];
   }
+
+  searchHeroes(termino: string) {
+    let heroesArr: any[] = [];
+    termino = termino.toLowerCase();
+
+    for (let heroe of this.heroes) {
+      let nombre = heroe.nombre.toLowerCase();
+      if (nombre.indexOf(termino) >= 0) {
+        heroesArr.push(heroe);
+      } else {
+        heroesArr.push({ nombre: '' });
+      }
+    }
+
+    return heroesArr;
+  }
 }
 //Esta interface es un template de las caracteristicas de un heroe
 export interface Heroe {

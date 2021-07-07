@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 
 //Aquí son creadas las rutas, ademas de las rutas defaults
 
@@ -13,6 +14,7 @@ const APP_ROUTES: Routes = [
   { path: 'heroes', component: HeroesComponent },
   //Así se declara una ruta con un ID pasado por parametros
   { path: 'heroe/:id', component: HeroeComponent },
+  { path: 'busqueda/:id', component: BusquedaComponent },
   //Ruta especial por si no hay match
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];

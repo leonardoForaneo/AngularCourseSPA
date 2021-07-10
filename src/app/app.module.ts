@@ -13,6 +13,7 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { APP_ROUTING } from './app.routes';
 //Servicios
 import { HeroesService } from './services/heroes.service';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HeroesService } from './services/heroes.service';
     HeroesComponent,
     HeroeComponent,
     BusquedaComponent,
+    HeroeTarjetaComponent,
   ], //Las rutas van en los imports
   imports: [BrowserModule, APP_ROUTING],
   //Aquí van todos los servicios

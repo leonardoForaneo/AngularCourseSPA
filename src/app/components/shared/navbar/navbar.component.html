@@ -24,12 +24,12 @@
                 </li>
             </ul>
 
-            <form class="d-flex">
+            <div class="d-flex">
                 <input #buscarTexto (keypress.enter)="buscarHeroe(buscarTexto.value)" class="form-control me-2" type="search" placeholder="Buscar heroe" aria-label="Search" />
                 <button (click)="buscarHeroe(buscarTexto.value)" #buscarTexto class="btn btn-outline-primary" type="button">
           Buscar
         </button>
-            </form>
+            </div>
         </div>
     </div>
 </nav>
